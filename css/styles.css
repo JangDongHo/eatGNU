@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Open+Sans:wght@400;600&display=swap");
+
+/* screens */
+@import "screens/home.css";
+
+/* components */
+@import "components/top-bars.css";
+@import "components/menu-bars.css";
+@import "components/intro.css";
+
+@import "reset.css";
+@import "variables.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: "Open Sans", sans-serif;
+  padding: 0px var(--body-padding);
+}

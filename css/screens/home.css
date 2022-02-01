@@ -1,0 +1,15 @@
+.restaurant-lists {
+  margin-top: 80px;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.restaurant-list {
+  width: 100%;
+}
+
+.restaurant-list__img {
+  width: 100%;
+  border-radius: 20px;
+}

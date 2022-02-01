@@ -1,0 +1,6 @@
+.top-bars {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
