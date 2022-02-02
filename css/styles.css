@@ -20,3 +20,8 @@ body {
   font-family: "Open Sans", sans-serif;
   padding: 0px var(--body-padding);
 }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}

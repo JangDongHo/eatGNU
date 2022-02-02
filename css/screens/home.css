@@ -1,4 +1,4 @@
-.wrapper {
+.main-box {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -10,31 +10,68 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: 40px;
 }
 
 .restaurant-list {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 80px;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.restaurant-list__tags {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.restaurant-list__tag {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 25px;
+  background-color: lightgrey;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.restaurant-list:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.restaurant-list__imgBox {
+  width: 100%;
+  height: 250px;
+  border-radius: var(--list-border-radius);
+  overflow: hidden;
 }
 
 .restaurant-list__img {
   width: 100%;
-  height: 200px;
-  border-radius: var(--list-border-radius);
+  height: 100%;
 }
 
 .restaurant-list__textBox {
+  position: absolute;
+  bottom: -50px;
   text-align: center;
   width: 90%;
   height: 100px;
   background-color: white;
   border-radius: var(--list-border-radius);
-  box-shadow: 0px 5px 30px black;
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.3);
 }
 
 .restaurant-list__textBox__name {
@@ -46,16 +83,17 @@
 .restaurant-list__textBox__sub {
   display: block;
   margin-bottom: 25px;
+  opacity: 0.6;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 530px) {
   .restaurant-list {
-    max-width: 770px;
+    max-width: 100%;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1276px) {
+@media screen and (min-width: 530px) {
   .restaurant-list {
-    max-width: 270px;
+    max-width: 370px;
   }
 }

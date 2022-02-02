@@ -1,6 +1,12 @@
 .top-bars {
+  position: fixed;
+  width: 100%;
+  background-color: var(--body-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
-  margin-top: 20px;
+  padding: 20px var(--body-padding) 10px;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
+  left: 0;
 }
