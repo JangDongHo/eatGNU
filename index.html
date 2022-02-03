@@ -24,8 +24,31 @@
         <h2 class="intro--sub">경상대학교 주변 먹을만한 식당들을 소개합니다.</h2>
       </div>
 
+      <div class="tag-filters">
+        <div class="tag-filter">
+          <h4 class="tag-filter__title">음식 종류</h4>
+          <div class="tag-filter__tags">
+            <span class="tag-filter__tag" data-value="all">모두</span>
+            <span class="tag-filter__tag" data-value="한식">한식</span>
+            <span class="tag-filter__tag">일식</span>
+            <span class="tag-filter__tag">양식</span>
+            <span class="tag-filter__tag">중식</span>
+            <span class="tag-filter__tag">고기</span>
+            <span class="tag-filter__tag">기타</span>
+          </div>
+        </div>
+        <div class="tag-filter">
+          <h4 class="tag-filter__title">식당 위치</h4>
+          <div class="tag-filter__tags">
+            <span class="tag-filter__tag">정문</span>
+            <span class="tag-filter__tag">후문</span>
+            <span class="tag-filter__tag">기타</span>
+          </div>
+        </div>
+      </div>
+
       <div class="restaurant-lists">
-        <div class="restaurant-list">
+        <div class="restaurant-list" data-group="all 한식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#한식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -38,7 +61,7 @@
             <span class="restaurant-list__textBox__sub">고기 많이 주는 무난한 돼지국밥</span>
           </div>
         </div>
-        <div class="restaurant-list">
+        <div class="restaurant-list" data-group="all 고기">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#고기</span>
             <span class="restaurant-list__tag">#정문</span>
@@ -51,7 +74,7 @@
             <span class="restaurant-list__textBox__sub">뒷고기에 볶음밥까지 싸악</span>
           </div>
         </div>
-        <div class="restaurant-list">
+        <div class="restaurant-list" data-group="all 일식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#일식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -64,7 +87,7 @@
             <span class="restaurant-list__textBox__sub">실패하지 않는 일본가정식 맛집!</span>
           </div>
         </div>
-        <div class="restaurant-list">
+        <div class="restaurant-list" data-group="all 일식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#일식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -77,7 +100,7 @@
             <span class="restaurant-list__textBox__sub">일본식 덮밥 맛집</span>
           </div>
         </div>
-        <div class="restaurant-list">
+        <div class="restaurant-list" data-group="all 한식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#한식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -90,7 +113,7 @@
             <span class="restaurant-list__textBox__sub">고기 많이 주는 무난한 돼지국밥</span>
           </div>
         </div>
-        <div class="restaurant-list">
+        <div class="restaurant-list" data-group="all 한식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#한식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -106,6 +129,7 @@
       </div>
     </main>
   </div>
+
   <script src="https://kit.fontawesome.com/b7f69e0a07.js" crossorigin="anonymous"></script>
 </body>
 </html>

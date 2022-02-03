@@ -11,6 +11,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
+  margin-top: 20px;
 }
 
 .restaurant-list {
@@ -41,7 +42,8 @@
   align-items: center;
   width: 55px;
   height: 25px;
-  background-color: lightgrey;
+  background-color: var(--tag-color);
+  opacity: 0.8;
   border-radius: 30px;
   margin-right: 10px;
 }

@@ -1,0 +1,27 @@
+.tag-filter {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tag-filter__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.tag-filter__tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tag-filter__tag {
+  background-color: var(--tag-color);
+  padding: 7px 18px;
+  border-radius: 30px;
+  font-weight: 500;
+  opacity: 0.8;
+  cursor: pointer;
+}
