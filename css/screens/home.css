@@ -11,7 +11,14 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
+  opacity: 1;
   margin-top: 20px;
+  transition: all ease-out 0.3s;
+}
+
+.restaurant-lists.anim-out {
+  opacity: 0;
+  transform: scale(0) translateY(23px);
 }
 
 .restaurant-list {
@@ -25,6 +32,10 @@
   margin-bottom: 80px;
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
+}
+
+.restaurant-list.invisible {
+  display: none;
 }
 
 .restaurant-list__tags {
