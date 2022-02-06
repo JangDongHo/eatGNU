@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCfOxWzYB9QovEcBf7hRLwTI69rqACPqsw" ></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <title>eatGNU - 잇지앤유</title>
@@ -30,25 +31,17 @@
           <div class="tag-filter__tags">
             <span class="tag-filter__tag" data-filter="*">모두</span>
             <span class="tag-filter__tag" data-filter="한식">한식</span>
-            <span class="tag-filter__tag">일식</span>
-            <span class="tag-filter__tag">양식</span>
-            <span class="tag-filter__tag">중식</span>
-            <span class="tag-filter__tag">고기</span>
-            <span class="tag-filter__tag">기타</span>
-          </div>
-        </div>
-        <div class="tag-filter">
-          <h4 class="tag-filter__title">식당 위치</h4>
-          <div class="tag-filter__tags">
-            <span class="tag-filter__tag">정문</span>
-            <span class="tag-filter__tag">후문</span>
-            <span class="tag-filter__tag">기타</span>
+            <span class="tag-filter__tag" data-filter="일식">일식</span>
+            <span class="tag-filter__tag" data-filter="양식">양식</span>
+            <span class="tag-filter__tag" data-filter="양식">중식</span>
+            <span class="tag-filter__tag" data-filter="고기">고기</span>
+            <span class="tag-filter__tag" data-filter="기타">기타</span>
           </div>
         </div>
       </div>
 
       <div class="restaurant-lists">
-        <div class="restaurant-list" data-type="한식">
+        <div class="restaurant-list" data-type="한식" data-type="정문">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#한식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -136,14 +129,12 @@
     tagBtnContainer.addEventListener('click', () => {
       const filter = 
       event.target.dataset.filter || event.target.parentNode.dataset.filter;
-      console.log(filter);
       if (filter == null) {
         return;
       }
       restaurantContainer.classList.add('anim-out');
       setTimeout(() => {
         restaurants.forEach((restaurant) => {
-          console.log(restaurant)
           if (filter === '*' || filter === restaurant.dataset.type) {
             restaurant.classList.remove('invisible');
           } else {
