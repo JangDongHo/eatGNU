@@ -8,19 +8,12 @@ map.setCursor('pointer');
 function searchAddressToCoordinate(address) {
   naver.maps.Service.geocode({
       query: address
-  }, function(status, response) {
-      if (status === naver.maps.Service.Status.ERROR) {
-          return alert('Something Wrong!222');
-      }
+  }, function() {
+    console.log("실행");
+    item = response.v2.addresses[0],
+    point = new naver.maps.Point(item.x, item.y);
 
-      if (response.v2.meta.totalCount === 0) {
-          return alert('totalCount' + response.v2.meta.totalCount);
-      }
-
-      var htmlAddresses = [],
-          point = new naver.maps.Point(item.x, item.y);
-
-      map.setCenter(point);
+    map.setCenter(point);
   });
 }
 
