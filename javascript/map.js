@@ -27,16 +27,6 @@ map.addListener('click', function(e) {
   utmk.x = parseFloat(utmk.x.toFixed(1));
   utmk.y = parseFloat(utmk.y.toFixed(1));
 
-  infoWindow.setContent([
-      '<div style="padding:10px;width:380px;font-size:14px;line-height:20px;">',
-      '<strong>LatLng</strong> : '+ '좌 클릭 지점 위/경도 좌표' +'<br />',
-      '<strong>UTMK</strong> : '+ '위/경도 좌표를 UTMK 좌표로 변환한 값' +'<br />',
-      '<strong>TM128</strong> : '+ '변환된 UTMK 좌표를 TM128 좌표로 변환한 값' +'<br />',
-      '<strong>NAVER</strong> : '+ '변환된 TM128 좌표를 NAVER 좌표로 변환한 값' +'<br />',
-      '</div>'
-  ].join(''));
-
-  infoWindow.open(map, latlng);
   console.log('LatLng: ' + latlng.toString());
   console.log('UTMK: ' + utmk.toString());
   console.log('TM128: ' + tm128.toString());
