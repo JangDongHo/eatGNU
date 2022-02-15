@@ -11,12 +11,7 @@ if (!map.isStyleMapReady) {
 
 var latlng = map.getCenter();
 
-map.addListener('click', function(e) {
-  var latlng = e.coord,
-
-  console.log('LatLng: ' + latlng.toString());
-});
-}
+console.log(latlng.toString());
 
 naver.maps.onJSContentLoaded = initGeocoder;
 naver.maps.Event.once(map, 'init_stylemap', initGeocoder);
