@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <title>eatGNU - 잇지앤유</title>
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=m60p7akqw3"></script>
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=m60p7akqw3&submodules=geocoder""></script>
   <meta property="og:url" content="https://jangdongho.github.io/eatGNU/">
   <meta property="og:title" content="eatGNU - 잇지앤유">
   <meta property="og:type" content="website">
@@ -39,9 +39,10 @@
           </div>
         </div>
       </div>
+      <a href="map.naver.com/search/가좌동/"></a>
 
       <div class="restaurant-lists">
-        <div class="restaurant-list" data-type="한식" data-type="정문" onclick="mapGenerator(35.23176357855658, 129.08536780915412,'박가부대','http://naver.me/Fa3wLDin')">
+        <div class="restaurant-list" address="가좌길 71" data-type="한식" data-type="정문">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#한식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -54,7 +55,7 @@
             <span class="restaurant-list__textBox__sub">고기 많이 주는 무난한 돼지국밥</span>
           </div>
         </div>
-        <div class="restaurant-list" data-type="고기">
+        <div class="restaurant-list" address="진주대로500번길 6" data-type="고기">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#고기</span>
             <span class="restaurant-list__tag">#정문</span>
@@ -67,7 +68,7 @@
             <span class="restaurant-list__textBox__sub">뒷고기에 볶음밥까지 싸악</span>
           </div>
         </div>
-        <div class="restaurant-list" data-type="일식">
+        <div class="restaurant-list" address="가좌동 507-11" data-type="일식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#일식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -80,7 +81,7 @@
             <span class="restaurant-list__textBox__sub">실패하지 않는 일본가정식 맛집!</span>
           </div>
         </div>
-        <div class="restaurant-list" data-type="일식">
+        <div class="restaurant-list" address="가좌길64번길 5" data-type="일식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#일식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -91,32 +92,6 @@
           <div class="restaurant-list__textBox">
             <span class="restaurant-list__textBox__name">쇼우도우</span>
             <span class="restaurant-list__textBox__sub">일본식 덮밥 맛집</span>
-          </div>
-        </div>
-        <div class="restaurant-list" data-type="한식">
-          <div class="restaurant-list__tags">
-            <span class="restaurant-list__tag">#한식</span>
-            <span class="restaurant-list__tag">#후문</span>
-          </div>
-          <div class="restaurant-list__imgBox">
-            <img class="restaurant-list__img" src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjFfMjcw%2FMDAxNjExMTk2NzQ2NTYx.oM96OOP2UGv3y1GMNnULBKeTcwhFBa6jpjLzyVOzphUg.pgzuZaQVyTUBZXXesmH-JEv9KfotN-d5onAFCtoz83Ag.JPEG.mymark0953%2F20210119_123706.jpg">
-          </div>
-          <div class="restaurant-list__textBox">
-            <span class="restaurant-list__textBox__name">통큰돼지국밥</span>
-            <span class="restaurant-list__textBox__sub">고기 많이 주는 무난한 돼지국밥</span>
-          </div>
-        </div>
-        <div class="restaurant-list" data-type="한식">
-          <div class="restaurant-list__tags">
-            <span class="restaurant-list__tag">#한식</span>
-            <span class="restaurant-list__tag">#후문</span>
-          </div>
-          <div class="restaurant-list__imgBox">
-            <img class="restaurant-list__img" src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjFfMjcw%2FMDAxNjExMTk2NzQ2NTYx.oM96OOP2UGv3y1GMNnULBKeTcwhFBa6jpjLzyVOzphUg.pgzuZaQVyTUBZXXesmH-JEv9KfotN-d5onAFCtoz83Ag.JPEG.mymark0953%2F20210119_123706.jpg">
-          </div>
-          <div class="restaurant-list__textBox">
-            <span class="restaurant-list__textBox__name">통큰돼지국밥</span>
-            <span class="restaurant-list__textBox__sub">고기 많이 주는 무난한 돼지국밥</span>
           </div>
         </div>
       </div>
