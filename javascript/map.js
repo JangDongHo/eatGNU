@@ -78,17 +78,7 @@ function mapGenerator(name, la,lo){
   }, 600);
 }
 
-function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
 function quitMap() {
-    if (isMobile()) {
-        if (infowindow.getMap()) {
-            alert("hi");
-            infowindow.close();
-        }
-    }
     queryMap.classList.add("invisible");
     document.body.style.overflow = "visible";
 }
