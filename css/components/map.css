@@ -1,0 +1,44 @@
+.main-box {
+  position: relative;
+}
+
+#map-container {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+}
+
+#map-box {
+  width: 100%;
+  height: 100%;
+}
+
+#map-quit {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 70px;
+  left: 10px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 6;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+#map-container.invisible {
+  display: none;
+}

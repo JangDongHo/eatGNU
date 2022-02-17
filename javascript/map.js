@@ -1,8 +1,13 @@
 const buttons = document.querySelectorAll(".restaurant-list");
+const queryMap = document.querySelector("#map-container");
+const mapQuitBtn = document.querySelector("#map-quit");
+
 for (const button of buttons) {
   button.addEventListener("click", function(event) {
     const restaurantName = event.path[2].childNodes[5].childNodes[1].innerText;
     const restaurantAddress = event.path[2].attributes[1].value;
+    document.body.style.overflow = "hidden";
+    queryMap.classList.remove("invisible");
     test(restaurantName, restaurantAddress);
   })
 }
@@ -72,3 +77,10 @@ function mapGenerator(name, la,lo){
       window.dispatchEvent(new Event('resize'));
   }, 600);
 }
+
+function quitMap() {
+    queryMap.classList.add("invisible");
+    document.body.style.overflow = "visible";
+}
+
+mapQuitBtn.addEventListener("click", quitMap);

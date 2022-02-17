@@ -7,6 +7,6 @@
   padding: 20px var(--body-padding) 10px;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 100;
   left: 0;
 }

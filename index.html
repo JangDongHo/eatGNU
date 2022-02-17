@@ -13,6 +13,12 @@
   <meta property="og:description" content="경상대학교 주변 맛집 검색">
 </head>
 <body>
+  <div id="map-container" class="invisible">
+    <div id="map-quit">x</div>
+    <div id="map-box">
+      <div id="map"></div>
+    </div>
+  </div>
   <div class="wrapper">
     <header class="top-bars">
       <span class="top-bars__title">ㅇㅈㅇㅇ</span>
@@ -39,10 +45,9 @@
           </div>
         </div>
       </div>
-      <a href="map.naver.com/search/가좌동/"></a>
 
       <div class="restaurant-lists">
-        <div class="restaurant-list" address="가좌길 71" data-type="한식" data-type="정문">
+        <div class="restaurant-list" address="가좌길 71" data-type="한식">
           <div class="restaurant-list__tags">
             <span class="restaurant-list__tag">#한식</span>
             <span class="restaurant-list__tag">#후문</span>
@@ -95,7 +100,6 @@
           </div>
         </div>
       </div>
-      <div id="map" style="width:100%;height:400px;"></div>
     </main>
   </div>
   <script src="javascript/filter.js"></script>
