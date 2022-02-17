@@ -12,6 +12,10 @@ for (const button of buttons) {
   })
 }
 
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 function geocoding(name, address) {
     var Addr_val = address;
 
@@ -44,15 +48,23 @@ function mapGenerator(name, la,lo){
           map: map,
           position: location
       });
-  
-  var contentString = [
-          '<div class="iw_inner ridi">',
-          '   <h5>'+name+'</h5>',
-          '   <p><br>',
-          '       <a target="_blank" href="http://map.naver.com/search/가좌동'+name+'" >네이버 지도 바로 가기</a>',
-          '   </p>',
-          '</div>'
-      ].join('');
+  if (isMobile()) {
+    var contentString = [
+        '<div class="">',
+        '   <h5>'+name+'</h5>',
+        '</div>'
+    ].join('');
+  }
+  else {
+    var contentString = [
+        '<div class="">',
+        '   <h5>'+name+'</h5>',
+        '   <p><br>',
+        '       <a target="_blank" href="http://map.naver.com/search/가좌동'+name+'" >네이버 지도 바로 가기</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+  }
   
   var infowindow = new naver.maps.InfoWindow({
       content: contentString,
