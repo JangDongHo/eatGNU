@@ -79,6 +79,7 @@ function mapGenerator(name, la,lo){
 }
 
 function quitMap() {
+    infowindow.close();
     queryMap.classList.add("invisible");
     document.body.style.overflow = "visible";
 }
