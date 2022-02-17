@@ -8,11 +8,11 @@ for (const button of buttons) {
     const restaurantAddress = event.path[2].attributes[1].value;
     document.body.style.overflow = "hidden";
     queryMap.classList.remove("invisible");
-    test(restaurantName, restaurantAddress);
+    geocoding(restaurantName, restaurantAddress);
   })
 }
 
-function test(name, address) {
+function geocoding(name, address) {
     var Addr_val = address;
 
     // 도로명 주소를 좌표 값으로 변환(API)
@@ -78,8 +78,14 @@ function mapGenerator(name, la,lo){
   }, 600);
 }
 
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 function quitMap() {
-    infowindow.close();
+    if (isMobile()) {
+        infowindow.close();
+    }
     queryMap.classList.add("invisible");
     document.body.style.overflow = "visible";
 }
