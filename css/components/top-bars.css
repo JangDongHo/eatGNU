@@ -10,3 +10,13 @@
   z-index: 100;
   left: 0;
 }
+
+.top-bars__title a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.top-bars__notice a {
+  color: black;
+  text-decoration: none;
+}
