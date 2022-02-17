@@ -84,7 +84,10 @@ function isMobile() {
 
 function quitMap() {
     if (isMobile()) {
-        infowindow.close();
+        if (infowindow.getMap()) {
+            alert("hi");
+            infowindow.close();
+        }
     }
     queryMap.classList.add("invisible");
     document.body.style.overflow = "visible";
