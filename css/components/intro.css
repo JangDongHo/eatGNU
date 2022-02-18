@@ -20,3 +20,17 @@
 .intro--email a {
   color: black;
 }
+
+.intro--icons {
+  display: flex;
+  justify-content: center;
+}
+
+.intro--icons span {
+  margin-right: 20px;
+}
+
+.intro--icons a {
+  color: black;
+  text-decoration: none;
+}

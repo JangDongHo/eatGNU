@@ -27,12 +27,3 @@ body {
   position: relative;
   width: 100%;
 }
-
-.fa,
-.fab,
-.fad,
-.fal,
-.far,
-.fas {
-  font-weight: 900 !important;
-}
