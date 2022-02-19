@@ -1,0 +1,58 @@
+.menu-bars__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 6;
+  background-color: var(--main-color);
+}
+
+.menu-bars__container.invisible {
+  display: none;
+}
+
+.menu-bars__title {
+  margin: 20px 0;
+}
+
+.menu-bars__title a {
+  color: white;
+}
+
+.menu-bars__btn__close {
+  color: white;
+  position: absolute;
+  top: 25px;
+  right: 22px;
+  cursor: pointer;
+}
+
+.menu-bars {
+  width: 90%;
+}
+
+.menu-bar {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.menu-bar:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.menu-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-bar.preparing {
+  cursor: not-allowed;
+  color: lightgrey;
+  opacity: 0.5;
+}

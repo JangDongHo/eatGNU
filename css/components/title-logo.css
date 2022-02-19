@@ -1,5 +1,9 @@
-.top-bars__title {
+.title-logo {
   font-family: "Black Han Sans", sans-serif;
   font-size: 27px;
+}
+
+.title-logo a {
   color: var(--main-color);
+  text-decoration: none;
 }

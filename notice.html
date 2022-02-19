@@ -4,35 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <!--페이지 설명-->
   <title>eatGNU - 잇지앤유</title>
-  <script src="https://kit.fontawesome.com/b7f69e0a07.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=m60p7akqw3&submodules=geocoder""></script>
-  <meta property="og:url" content="https://jangdongho.github.io/eatGNU/">
-  <meta property="og:title" content="eatGNU - 잇지앤유">
+  <meta name="description" content="경상대학교 주변 식당 찾아보기">
+  <link rel="shortcut icon" href="css/image/favicon.ico">
+  <!--네이버 서치 어드바이저-->
+  <meta name="naver-site-verification" content="0d3ce23029926376892b30f7482b37563f570b67" />
+  <!--소셜미디어(카카오톡)-->
   <meta property="og:type" content="website">
+  <meta property="og:title" content="eatGNU - 잇지앤유">
+  <meta property="og:description" content="경상대학교 주변 식당 찾아보기">
   <meta property="og:image" content="css/image/logo.png">
-  <meta property="og:description" content="경상대학교 주변 식당 검색">
+  <meta property="og:url" content="http://eatgnu.kro.kr/">
+  <!--부가기능-->
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=m60p7akqw3&submodules=geocoder""></script>
+  <script src="https://kit.fontawesome.com/b7f69e0a07.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="map-container" class="invisible">
-    <div id="map-quit">x</div>
-    <div id="map-box">
-      <div id="map"></div>
-    </div>
-  </div>
   <div class="wrapper">
     <header class="top-bars">
-      <span class="top-bars__title"><a href="index.html">ㅇㅈㅇㅇ</a></span>
-      <span class="top-bars__notice"><a href="notice.html"><i class="fas fa-bullhorn fa-lg"></i></a></span>
+      <span class="top-bars__title title-logo"><a href="index.html">ㅇㅈㅇㅇ</a></span>
+      <span class="top-bars__menu"><i class="fa-solid fa-bars fa-lg"></i></span>
     </header>
+
+    <nav class="menu-bars__container invisible">
+      <span class="menu-bars__title title-logo"><a href="index.html">ㅇㅈㅇㅇ</a></span>
+      <span class="menu-bars__btn__close"><i class="fa-solid fa-x fa-lg"></i></span>
+      <ul class="menu-bars">
+        <li class="menu-bar preparing">
+          <span>홈</span>
+        </li>
+        <li class="menu-bar">
+          <a href="index.html"><span>맛집 리스트</span></a>
+        </li>
+        <li class="menu-bar preparing">
+          <span>교내 학식</span>
+        </li>
+        <li class="menu-bar preparing">
+          <span>음식 뽑기</span>
+        </li>
+        <li class="menu-bar">
+          <a href="notice.html"><span>업데이트 소식</span></a>
+        </li>
+        <li class="menu-bar">
+          <a href="notice.html"><span>개발자</span></a>
+        </li>
+      </ul>
+    </nav>
 
     <main class="main-box">
       <div class="intro">
         <h1 class="intro--title">만든이</h1>
         <h2 class="intro--sub">컴퓨터과학과 19학번 장동호</h2>
         <div class="intro--icons">
-          <span><a href="https://github.com/JangDongHo" target="_blank"><i class="fa fa-brands fa-github fa-3x"></a></i></span>
-          <span><a href="https://www.instagram.com/dongho_18/" target="_blank"><i class="fa fa-brands fa-instagram fa-3x"></a></i></span>
+          <span><a href="https://github.com/JangDongHo" target="_blank"><i class="fa-brands fa-github fa-3x"></a></i></span>
+          <span><a href="https://www.instagram.com/dongho_18/" target="_blank"><i class="fa-brands fa-instagram fa-3x"></a></i></span>
         </div>
       </div>
       <div class="intro">
@@ -46,5 +72,6 @@
       </div>
     </main>
   </div>
+  <script src="javascript/menubtn.js"></script>
 </body>
 </html>

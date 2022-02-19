@@ -16,8 +16,9 @@
   <meta property="og:description" content="경상대학교 주변 식당 찾아보기">
   <meta property="og:image" content="css/image/logo.png">
   <meta property="og:url" content="http://eatgnu.kro.kr/">
-  <!--네이버 맵 api-->
+  <!--부가기능-->
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=m60p7akqw3&submodules=geocoder""></script>
+  <script src="https://kit.fontawesome.com/b7f69e0a07.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div id="map-container" class="invisible">
@@ -28,9 +29,34 @@
   </div>
   <div class="wrapper">
     <header class="top-bars">
-      <span class="top-bars__title"><a href="index.html">ㅇㅈㅇㅇ</a></span>
-      <span class="top-bars__notice"><a href="notice.html"><i class="fas fa-bullhorn fa-lg"></i></a></span>
+      <span class="top-bars__title title-logo"><a href="index.html">ㅇㅈㅇㅇ</a></span>
+      <span class="top-bars__menu"><i class="fa-solid fa-bars fa-lg"></i></span>
     </header>
+
+    <nav class="menu-bars__container invisible">
+      <span class="menu-bars__title title-logo"><a href="index.html">ㅇㅈㅇㅇ</a></span>
+      <span class="menu-bars__btn__close"><i class="fa-solid fa-x fa-lg"></i></span>
+      <ul class="menu-bars">
+        <li class="menu-bar preparing">
+          <span>홈</span>
+        </li>
+        <li class="menu-bar">
+          <a href="index.html"><span>맛집 리스트</span></a>
+        </li>
+        <li class="menu-bar preparing">
+          <span>교내 학식</span>
+        </li>
+        <li class="menu-bar preparing">
+          <span>음식 뽑기</span>
+        </li>
+        <li class="menu-bar">
+          <a href="notice.html"><span>업데이트 소식</span></a>
+        </li>
+        <li class="menu-bar">
+          <a href="notice.html"><span>개발자</span></a>
+        </li>
+      </ul>
+    </nav>
 
     <main class="main-box">
       <div class="intro">
@@ -840,9 +866,9 @@
       </div>
     </main>
   </div>
+  <script src="javascript/menubtn.js"></script>
   <script src="javascript/filter.js"></script>
   <script src="javascript/map.js"></script>
   <script src="javascript/visit.js"></script>
-  <script src="https://kit.fontawesome.com/b7f69e0a07.js" crossorigin="anonymous"></script>
 </body>
 </html>

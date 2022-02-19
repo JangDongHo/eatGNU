@@ -4,11 +4,13 @@
 @import "screens/home.css";
 
 /* components */
+@import "components/title-logo.css";
 @import "components/top-bars.css";
 @import "components/menu-bars.css";
 @import "components/intro.css";
 @import "components/tag-filters.css";
 @import "components/map.css";
+@import "components/menu.css";
 
 @import "reset.css";
 @import "variables.css";
