@@ -4,9 +4,12 @@ const mapQuitBtn = document.querySelector("#map-quit");
 
 for (const button of buttons) {
   button.addEventListener("click", function(event) {
-    console.dir(event);
-    const restaurantName = event.path[2].childNodes[5].childNodes[1].innerText;
-    const restaurantAddress = event.path[2].attributes[1].value;
+    let restaurantPath = event.target.offsetParent;
+    if (restaurantPath.classList.value !== "restaurant-list") { 
+      restaurantPath = restaurantPath.offsetParent;
+    }
+    const restaurantName = restaurantPath.childNodes[5].childNodes[1].innerText;
+    const restaurantAddress = restaurantPath.attributes[1].value;
     document.body.style.overflow = "hidden";
     queryMap.classList.remove("invisible");
     geocoding(restaurantName, restaurantAddress);
@@ -45,7 +48,6 @@ function geocoding(name, address) {
 }
 
 function mapGenerator(name, la,lo){
-  var HOME_PATH = window.HOME_PATH || '.';
   var location = new naver.maps.LatLng(la,lo),
       map = new naver.maps.Map('map', {
           center: location,
@@ -57,42 +59,36 @@ function mapGenerator(name, la,lo){
       });
   if (isMobile()) {
     var contentString = [
-        '<div class="">',
+        '<div>',
         '   <h5>'+name+'</h5>',
         '</div>'
     ].join('');
   }
   else {
     var contentString = [
-        '<div class="">',
-        '   <h5>'+name+'</h5>',
-        '   <p><br>',
-        '       <a target="_blank" href="http://map.naver.com/search/가좌동'+name+'" >네이버 지도 바로 가기</a>',
-        '   </p>',
+        '<div>',
+        '   <h5>'+name+'</h5><br>',
+        '   <a target="_blank" href="http://map.naver.com/search/가좌동'+name+'" >네이버 지도 바로 가기</a>',
         '</div>'
     ].join('');
   }
   
   var infowindow = new naver.maps.InfoWindow({
       content: contentString,
-      maxWidth: 300,
+      //maxWidth: 300,
       backgroundColor: "#eee",
       borderColor: "#A4A4A4",
-      borderRadius:"30px",
+      //borderRadius:"30px",
       borderWidth: 2,
       disableAnchor:true,
-      anchorColor: "#A4A4A4",
-      pixelOffset: new naver.maps.Point(10, -10)
+      pixelOffset: new naver.maps.Point(0, -10)
   });
   
-  naver.maps.Event.addListener(marker, "click", function(e) {
+  naver.maps.Event.addListener(marker, "click", function() {
       if (infowindow.getMap()) {
         infowindow.close();
       } else {
         infowindow.open(map, marker);
       }
   });
-  setTimeout(function() {
-      window.dispatchEvent(new Event('resize'));
-  }, 600);
 }
