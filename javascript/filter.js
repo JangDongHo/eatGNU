@@ -1,7 +1,8 @@
 const tagBtnContainer = document.querySelector('.tag-filter__tags');
 const restaurantContainer = document.querySelector('.restaurant-lists');
 const restaurants = document.querySelectorAll('.restaurant-list');
-tagBtnContainer.addEventListener('click', () => {
+
+tagBtnContainer.addEventListener('click', (event) => {
   const filter = 
   event.target.dataset.filter || event.target.parentNode.dataset.filter;
   if (filter == null) {
