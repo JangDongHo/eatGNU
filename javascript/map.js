@@ -4,6 +4,7 @@ const mapQuitBtn = document.querySelector("#map-quit");
 
 for (const button of buttons) {
   button.addEventListener("click", function(event) {
+    console.dir(event);
     const restaurantName = event.path[2].childNodes[5].childNodes[1].innerText;
     const restaurantAddress = event.path[2].attributes[1].value;
     document.body.style.overflow = "hidden";
@@ -14,6 +15,11 @@ for (const button of buttons) {
 
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+function quitMap() {
+    queryMap.classList.add("invisible");
+    document.body.style.overflow = "visible";
 }
 
 function geocoding(name, address) {
@@ -33,6 +39,7 @@ function geocoding(name, address) {
         // 리턴 받은 좌표 값을 변수에 저장
         let x = parseFloat(items[0].x);
         let y = parseFloat(items[0].y);
+        mapQuitBtn.addEventListener("click", quitMap);
         mapGenerator(name, String(y), String(x));
     })
 }
@@ -80,19 +87,12 @@ function mapGenerator(name, la,lo){
   
   naver.maps.Event.addListener(marker, "click", function(e) {
       if (infowindow.getMap()) {
-          infowindow.close();
+        infowindow.close();
       } else {
-          infowindow.open(map, marker);
+        infowindow.open(map, marker);
       }
   });
   setTimeout(function() {
       window.dispatchEvent(new Event('resize'));
   }, 600);
 }
-
-function quitMap() {
-    queryMap.classList.add("invisible");
-    document.body.style.overflow = "visible";
-}
-
-mapQuitBtn.addEventListener("click", quitMap);
