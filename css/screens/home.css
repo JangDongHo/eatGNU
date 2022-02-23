@@ -22,13 +22,12 @@
   flex-direction: column;
   align-items: center;
   width: 90%;
-  height: 90%;
+  height: 80%;
   z-index: 11;
   background-color: white;
 }
 
 .notice__title {
-  margin: 140px 0 50px;
   font-size: 35px;
   font-weight: 700;
   color: var(--main-color);
@@ -60,6 +59,7 @@
 @media screen and (max-width: 530px) {
   .notice__title {
     font-size: 35px;
+    margin: 100px 0 50px;
   }
   .notice__btn__close {
     font-size: 25px;
@@ -68,11 +68,15 @@
     width: 90%;
     font-size: 11px;
   }
+  .notice__btn__noshow {
+    font-size: 15px;
+  }
 }
 
 @media screen and (min-width: 530px) {
   .notice__title {
     font-size: 40px;
+    margin: 140px 0 50px;
   }
   .notice__btn__close {
     font-size: 40px;
@@ -80,6 +84,9 @@
   .notices {
     min-width: 70%;
     font-size: 19px;
+  }
+  .notice__btn__noshow {
+    font-size: 20px;
   }
 }
 
@@ -110,7 +117,6 @@
 }
 
 .notice__btn__noshow {
-  font-size: 20px;
   position: absolute;
   bottom: -50px;
   right: 0;
