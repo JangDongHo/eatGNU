@@ -16,15 +16,6 @@ for (const button of buttons) {
   })
 }
 
-function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-function quitMap() {
-    queryMap.classList.add("invisible");
-    document.body.style.overflow = "visible";
-}
-
 function geocoding(name, address) {
     var Addr_val = address;
 
@@ -42,7 +33,6 @@ function geocoding(name, address) {
         // 리턴 받은 좌표 값을 변수에 저장
         let x = parseFloat(items[0].x);
         let y = parseFloat(items[0].y);
-        mapQuitBtn.addEventListener("click", quitMap);
         mapGenerator(name, String(y), String(x));
     })
 }
@@ -72,16 +62,16 @@ function mapGenerator(name, la,lo){
         '</div>'
     ].join('');
   }
-  
+
   var infowindow = new naver.maps.InfoWindow({
-      content: contentString,
-      //maxWidth: 300,
-      backgroundColor: "#eee",
-      borderColor: "#A4A4A4",
-      //borderRadius:"30px",
-      borderWidth: 2,
-      disableAnchor:true,
-      pixelOffset: new naver.maps.Point(0, -10)
+    content: contentString,
+    //maxWidth: 300,
+    backgroundColor: "#eee",
+    borderColor: "#A4A4A4",
+    //borderRadius:"30px",
+    borderWidth: 2,
+    disableAnchor:true,
+    pixelOffset: new naver.maps.Point(0, -10)
   });
   
   naver.maps.Event.addListener(marker, "click", function() {
@@ -90,5 +80,13 @@ function mapGenerator(name, la,lo){
       } else {
         infowindow.open(map, marker);
       }
+  });
+
+  mapQuitBtn.addEventListener("click", function() {
+    if (infowindow.getMap()) {
+      infowindow.close();
+    }
+    queryMap.classList.add("invisible");
+    document.body.style.overflow = "visible";
   });
 }
